@@ -120,3 +120,44 @@ int main()
 
     return 0;
 }
+----------------------------------------------------------------------------
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a,b,c,intermedio,mayor,menor;
+    cout<<("\n\n\t--> ORDENAMIENTO DE NUMEROS <--")<<endl;
+    cout << ("\nIngrese 3 numeros: ") << endl;
+    cin>>a>>b>>c;
+
+    mayor=a;
+    menor=a;
+    if (a>mayor)
+        mayor=a;
+    if (b>mayor)
+        mayor=b;
+    if (c>mayor)
+        mayor=c;
+    if (a<menor)
+        menor=a;
+    if (b<menor)
+        menor=b;
+    if (c<menor)
+        menor=c;
+    if ((a<=b && a>=c)|| (a<=c && a>=b))
+        intermedio=a;
+
+    else
+        if( (b<=a && b>=c)||(b<=c && b>=a))
+            intermedio=b;
+        else
+            intermedio=c;
+    cout<<("\nLos numeros se han ordenado de la siguiente forma")<<endl;
+    cout<<("\nASCENDENTE\tDESCENDENTE")<<endl;
+    cout<<menor<<("\t\t")<<mayor<<endl;
+    cout<<intermedio<<("\t\t")<<intermedio<<endl;
+    cout<<mayor<<("\t\t")<<menor<<endl;
+
+  return 0;
+}
