@@ -19,7 +19,6 @@ int main()
     cout<<("\n\tSi -> Precione cualquier numero");
     cout<<("\n\tNo -> 0\n");
     cin>>respuesta;
-
     if (respuesta ==0)
         cout<<("\nUsted no trabajo horas extras...")<<endl;
     else
@@ -55,8 +54,6 @@ int main()
             else
                 cout<<("\nUsted gano mas en su horario de oficina que por sus horas extras")<<endl;
         }
-
-
     }
     cout<<("\nPAGO BASE:\tS/")<<p_base;
     cout<<("\nPAGO EXTRA:\tS/")<<extra;
