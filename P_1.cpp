@@ -179,3 +179,28 @@ int main()
     cout<<("\nEl numero ingresado tiene: ")<<c<<(" cifras")<<endl;
     return 0;
 }
+-------------------------------------------------------------
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int num;
+    cout<<("\n\n\t--> AUMENTA CEROS <--");
+    cout<<("\nIngrese un numero: ");
+    cin>>num;
+    if (num>=0 && num<10000)
+    {
+        if (num <10)
+            cout<<("000")<<num;
+        else if (num <100)
+            cout<<("00")<<num;
+        else if (num <1000)
+            cout<<("0")<<num;
+        else
+            cout<<num;
+    }
+    else
+        cout<<("\nValor incorrecto");
+    return 0;
+}
