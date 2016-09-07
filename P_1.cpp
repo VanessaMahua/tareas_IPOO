@@ -64,3 +64,59 @@ int main()
 
     return 0;
 }
+
+-------------------------------------
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
+
+int main()
+{
+    float total;
+    int num;
+    cout<<("\n\n\t\t\t--> DESCUENTOS <--")<<endl;
+    cout<<("\nIntroduzca la cantidad total de la compra : ");
+    cin>>total;
+    if (total>=100)
+    {
+        cout<<("\nSus gasto IGUALA o SUPERA los $/100.00 y por tando participa en la promocion")<<endl;
+        cout<<("\n\t COLOR\t\tDESCUENTO")<<endl;
+        cout<<("\n\t BOLA BLANCA\t\tNo tiene");
+        cout<<("\n\t BOLA ROJA\t\t10 POR CIENTO");
+        cout<<("\n\t BOLA AZUL\t\t20 POR CIENTO");
+        cout<<("\n\t BOLA VERDE\t\t25 POR CIENTO");
+        cout<<("\n\t BOLA AMARILLA\t\t50 POR CIENTO")<<endl;
+        num = rand() % 5;
+        switch(num)
+        {
+            case 0:
+                cout<<("\n Aleatoriamente usted obtuvo una BOLA BLANCA");
+                cout<<("\n Usted no accede a ningun descuento");
+                break;
+            case 1:
+                cout<<("\n Aleatoriamente usted obtuvo una BOLA ROJA");
+                cout<<("\n FELICIDADES, HA GANADO UN 10 POR CIENTO DE DESCUENTO");
+                total-=total*10/100;
+                break;
+            case 2:
+                cout<<("\n Aleatoriamente usted obtuvo una BOLA AZUL");
+                cout<<("\n FELICIDADES, HA GANADO UN 20 POR CIENTO DE DESCUENTO");
+                total-=total*20/100;
+                break;
+            case 3:
+                cout<<("\n Aleatoriamente usted obtuvo una BOLA VERDE");
+                cout<<("\n FELICIDADES, HA GANADO UN 25 POR CIENTO DE DESCUENTO");
+                total-=total*25/100;
+                break;
+            default:
+                cout<<("\n Aleatoriamente usted obtuvo una BOLA AMARILLA");
+                cout<<("\n FELICIDADES, HA GANADO UN 50 POR CIENTO DE DESCUENTO");
+                total-=total*50/100;
+        }
+    }
+    else
+        cout<<("\n Cliente no aplica a una promocion");
+    cout<<("\n\n SU TOTAL A PAGAR: S/")<<total<<endl;
+
+    return 0;
+}
