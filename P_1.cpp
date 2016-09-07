@@ -161,3 +161,21 @@ int main()
 
   return 0;
 }
+----------------------------------------------------------
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int num,c=0;
+    cout<<("\n\n\t--> NUMERO DE CIFRAS <--");
+    cout<<("\nIngrese un numero: ");
+    cin>>num;
+    while(num!=0)
+    {
+        num/=10;
+        c+=1;
+    }
+    cout<<("\nEl numero ingresado tiene: ")<<c<<(" cifras")<<endl;
+    return 0;
+}
