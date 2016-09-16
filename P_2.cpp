@@ -102,3 +102,45 @@ int main()
 	cout<<"\nEl maximo comun divisor es: "<<mcd;
 return 0;
 }
+16
+=====================================
+#include <iostream>
+using namespace std;
+
+void itera(int n, char C[])
+{
+    int i;
+    int inc = 0;
+    int it = n * (n - 1);
+
+    while (inc < it) {
+        for (i = n - 1; i > 0; i--) {
+            int aux = C[i-1];
+            C[i-1] = C[i];
+            C[i] = aux;
+            for (int j = 0; j < n; j++)
+                cout << C[j];
+            cout << endl;
+            inc++;
+        }
+    }
+}
+
+int main()
+{
+    int n;
+
+    cout << "Cuantos caracteres desea iterar? ";
+    cin >> n;
+
+    char C[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        cout << "Ingrese caracter " << i + 1 << ": ";
+        cin >> C[i];
+    }
+    itera(n, C);
+
+    return 0;
+}
